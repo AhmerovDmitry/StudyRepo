@@ -53,6 +53,17 @@ class ViewController: UIViewController {
                                             green: CGFloat(arraySlider[1].value),
                                             blue: CGFloat(arraySlider[2].value),
                                             alpha: 1)
+        inputData()
+    }
+    
+    func inputData() {
+        arraySlider[0].value = Float(arrayTextField[0].text!)! / 255
+        arraySlider[1].value = Float(arrayTextField[1].text!)! / 255
+        arraySlider[2].value = Float(arrayTextField[2].text!)! / 255
+        
+        print(arraySlider[0].value)
+        print(arraySlider[1].value)
+        print(arraySlider[2].value)
     }
 }
 // remove keyboard use tap on view
@@ -62,3 +73,4 @@ extension UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
 }
+
