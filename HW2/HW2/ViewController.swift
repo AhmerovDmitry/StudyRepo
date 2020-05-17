@@ -29,12 +29,10 @@ class ViewController: UIViewController, UITextFieldDelegate{
         // slider settings
         valueRange(max: 1, and: 0)
         // text field settings
-        for field in arrayTextField {
+        for (index, field) in arrayTextField.enumerated() {
             field.keyboardType = .numberPad
+            arrayTextField[index].addTarget(self, action: #selector(redTextFieldDidChange), for: .editingChanged)
         }
-        arrayTextField[0].addTarget(self, action: #selector(redTextFieldDidChange), for: .editingChanged)
-        arrayTextField[1].addTarget(self, action: #selector(redTextFieldDidChange), for: .editingChanged)
-        arrayTextField[2].addTarget(self, action: #selector(redTextFieldDidChange), for: .editingChanged)
         // remove keyboard use tap on view
         addTapGestureToHideKeyboard()
     }
@@ -105,5 +103,3 @@ extension UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
 }
-
-// test for GitHub pullRequest
