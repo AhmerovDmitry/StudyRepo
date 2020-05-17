@@ -105,5 +105,3 @@ extension UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
 }
-
-// test for GitHub pullRequest
