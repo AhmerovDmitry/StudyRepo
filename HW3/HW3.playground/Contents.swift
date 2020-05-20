@@ -1,7 +1,17 @@
-import UIKit
-
 var collection: [Any] = [2, "Hi", true, 5, "Bye", false]
-print(collection)
+for item in collection {
+    print(item)
+}
+
+for item in collection {
+    if let item = item as? Int {
+        print("\(item) is Int")
+    } else if let item = item as? String {
+        print("\(item) is String")
+    } else if let item = item as? Bool {
+        print("\(item) is Bool")
+    }
+}
 
 for value in collection {
     if value is Int {
@@ -13,23 +23,45 @@ for value in collection {
     }
 }
 
-var dict = [String: Any]()
+let dictOfItems: [String: Any] = ["Int": 23,
+                                  "Double": 3.14,
+                                  "String": "String",
+                                  "Bool true": true,
+                                  "Bool false": false]
 
-var key = [String]()
-var value = [Any]()
+for (key, value) in dictOfItems {
+    print("Key: \(key), Value: \(value)")
+}
 
-for index in collection {
-    if index is String {
-        key.append(index as! String)
-    } else {
-        value.append(index)
+var total: Double = 0
+
+for value in dictOfItems.values {
+    if let item = value as? Int {
+        total += Double(item)
+    } else if let item = value as? Double {
+        total += item
+    } else if value is String {
+        total += 1
+    } else if let item = value as? Bool {
+        total += item ? 2 : -3
     }
 }
-for key in key {
-    dict[key] = value
-}
-print(dict)
+print(total)
 
+total = 0
+
+for value in dictOfItems.values {
+    if let item = value as? Int {
+        total += Double(item)
+    } else if let item = value as? Double {
+        total += item
+    } else if let item = value as? String {
+        if let number = Double(item) {
+            total += number
+        }
+    }
+}
+print(total)
 
 class Workout {
     let time: Double
