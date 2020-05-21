@@ -27,10 +27,32 @@ class ViewController: UIViewController {
     // Logic for "Log In" button
     @IBAction func logInButton() {
         if textFieldName.text == "User" && textFieldPassword.text == "Password" {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyboard.instantiateViewController(identifier: "UserVC") as! SecondViewController
+            
+            newViewController.modalTransitionStyle = .crossDissolve // это значение можно менять для разных видов анимации появления
+            newViewController.modalPresentationStyle = .fullScreen // это та самая волшебная строка, убрав или закомментировав ее, вы получите появление смахиваемого контроллера
+            
+            self.present(newViewController, animated: true, completion: nil)
+            
+            textFieldName.text = ""
+            textFieldPassword.text = ""
+        } else if textFieldName.text == "Admin" && textFieldPassword.text == "Admin" {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyboard.instantiateViewController(identifier: "AdminVC") as! AdminViewController
+            
+            newViewController.modalTransitionStyle = .crossDissolve // это значение можно менять для разных видов анимации появления
+            newViewController.modalPresentationStyle = .fullScreen // это та самая волшебная строка, убрав или закомментировав ее, вы получите появление смахиваемого контроллера
+            
+            self.present(newViewController, animated: true, completion: nil)
+            
+            textFieldName.text = ""
+            textFieldPassword.text = ""
         } else {
             showAlert(title: "Error", message: "Incorrect information!")
         }
     }
+    
     // Logic for "Forgot User Name?"
     @IBAction func forgotNameButton() {
         showAlert(title: "User Name", message: "User")
@@ -39,11 +61,7 @@ class ViewController: UIViewController {
     @IBAction func forgotPasswordButton() {
         showAlert(title: "User Password", message: "Password")
     }
-    
-    // Remove keyboard use tap on view
-//    func addTapGestureToHideKeyboard() {
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(view.endEditing))
-//        view.addGestureRecognizer(tapGesture)
-//    }
+    @IBAction func unwindSegue(_ sender: UIStoryboardSegue) {
+    }
 }
 

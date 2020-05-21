@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  AdminViewController.swift
 //  HW5
 //
 //  Created by Дмитрий Ахмеров on 27 Iyar 5780.
@@ -8,22 +8,16 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
-
-    @IBOutlet weak var headLabel: UILabel!
-    @IBOutlet weak var bodyLabel: UILabel!
-    @IBOutlet weak var tailLabel: UILabel!
+class AdminViewController: UIViewController {
     
-    @IBOutlet weak var secretInfo: UIButton!
-    @IBOutlet weak var secretLabel: UILabel!
+    @IBOutlet weak var aboutMeOutlet: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        secretInfo.alpha = 0.2
-        
-        headLabel.text = "Welcome User!"
-        bodyLabel.text = "Glad to see you in my app!"
+        aboutMeOutlet.setTitle("About Me", for: .normal)
+    }
+    
+    @IBAction func aboutMeButton() {
     }
     
     /*
@@ -35,8 +29,5 @@ class SecondViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func infoButton() {
-        secretLabel.text = "Name: Admin \nPassword: Admin"
-    }
-    
+
 }

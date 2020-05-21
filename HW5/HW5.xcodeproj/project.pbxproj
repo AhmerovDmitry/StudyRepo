@@ -14,6 +14,7 @@
 		BC0204AB24767A6500E6CD79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC0204AA24767A6500E6CD79 /* Assets.xcassets */; };
 		BC0204AE24767A6500E6CD79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC0204AC24767A6500E6CD79 /* LaunchScreen.storyboard */; };
 		BC0204B924767C2F00E6CD79 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0204B824767C2F00E6CD79 /* SecondViewController.swift */; };
+		BCDC797C24768FE900D6333D /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDC797B24768FE900D6333D /* AdminViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BC0204AD24767A6500E6CD79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC0204AF24767A6500E6CD79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC0204B824767C2F00E6CD79 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BCDC797B24768FE900D6333D /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			children = (
 				BC0204A524767A6400E6CD79 /* ViewController.swift */,
 				BC0204B824767C2F00E6CD79 /* SecondViewController.swift */,
+				BCDC797B24768FE900D6333D /* AdminViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				BC0204B924767C2F00E6CD79 /* SecondViewController.swift in Sources */,
 				BC0204A624767A6400E6CD79 /* ViewController.swift in Sources */,
 				BC0204A224767A6400E6CD79 /* AppDelegate.swift in Sources */,
+				BCDC797C24768FE900D6333D /* AdminViewController.swift in Sources */,
 				BC0204A424767A6400E6CD79 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
