@@ -38,5 +38,4 @@ class SecondViewController: UIViewController {
     @IBAction func infoButton() {
         secretLabel.text = "Name: Admin \nPassword: Admin"
     }
-    
 }
