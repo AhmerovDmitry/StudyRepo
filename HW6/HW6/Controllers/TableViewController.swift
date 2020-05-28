@@ -30,10 +30,8 @@ class TableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let indexPath = tableView.indexPathForSelectedRow {
-            let detailVC = segue.destination as! DetailViewController
+        if let indexPath = tableView.indexPathForSelectedRow, let detailVC = segue.destination as? DetailViewController {
             detailVC.personInfo = persons[indexPath.row]
         }
     }
-
 }
