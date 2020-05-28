@@ -17,9 +17,9 @@ class DetailViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = personInfo.personFullName
-        phoneLabel.text = personInfo.personPhone
-        mailLabel.text = personInfo.personMail
+        nameLabel.text = personInfo.fullName
+        phoneLabel.text = personInfo.phone
+        mailLabel.text = personInfo.mail
     }
 
 }
