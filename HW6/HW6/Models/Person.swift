@@ -9,10 +9,10 @@
 import Foundation
 
 struct Person {
-    var firstName: String
-    var secondName: String
-    var mail: String
-    var phone: String
+    let firstName: String
+    let secondName: String
+    let mail: String
+    let phone: String
     
     var fullName: String! {
         [firstName, secondName].joined(separator: " ")
@@ -20,7 +20,7 @@ struct Person {
         
     static func randomList() -> [Person] {
         
-        var persons = [Person]()
+        var persons: [Person] = []
         
         let names = Constants.name.shuffled()
         let secondNames = Constants.secondName.shuffled()
