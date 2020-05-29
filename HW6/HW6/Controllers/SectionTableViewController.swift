@@ -22,7 +22,6 @@ class SectionTableViewController: UITableViewController {
 //    }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return persons.count
     }
@@ -37,9 +36,12 @@ class SectionTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        let personInformation = persons[indexPath.section].1[indexPath.row]
-        cell.textLabel?.text = personInformation
+        cell.textLabel?.text = persons[indexPath.section].1[indexPath.row]
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
