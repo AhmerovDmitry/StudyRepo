@@ -10,7 +10,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    let persons = Person.addPerson()
+    let persons = Person.randomList()
 
     // MARK: - Table view data source
 
@@ -22,7 +22,7 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PersonsList", for: indexPath)
         let person = persons[indexPath.row]
         
-        cell.textLabel?.text = person.personFullName
+        cell.textLabel?.text = person.fullName
         
         return cell
     }

@@ -9,39 +9,43 @@
 import Foundation
 
 struct Person {
-    var personFirstName: String
-    var personSecondName: String
-    var personMail: String
-    var personPhone: String
+    var firstName: String
+    var secondName: String
+    var mail: String
+    var phone: String
     
-    var personFullName: String! {
-        personFirstName + " " + personSecondName
+    var fullName: String! {
+        [firstName, secondName].joined(separator: " ")
     }
         
-    static func addPerson() -> [Person] {
+    static func randomList() -> [Person] {
         
         var persons = [Person]()
         
-        let names = name.shuffled()
-        let secondNames = secondName.shuffled()
-        let mails = mail.shuffled()
-        let phones = phone.shuffled()
+        let names = Constants.name.shuffled()
+        let secondNames = Constants.secondName.shuffled()
+        let mails = Constants.mail.shuffled()
+        let phones = Constants.phone.shuffled()
         
-        for index in 0..<name.count {
-            let person = Person(personFirstName: names[index],
-                                personSecondName: secondNames[index],
-                                personMail: mails[index],
-                                personPhone: phones[index])
+        for index in 0..<Constants.name.count {
+            let person = Person(firstName: names[index],
+                                secondName: secondNames[index],
+                                mail: mails[index],
+                                phone: phones[index])
             persons.append(person)
         }
         return persons
     }
 }
 
-let name = ["Дмитрий", "Олег", "Андрей", "Александр", "Антон"]
-let secondName = ["Ахмеров", "Русских", "Уваров", "Нихаев", "Сунгуров"]
-let mail = ["first@mail.swift", "second@mail.swift", "third@mail.swift", "fourth@mail.swift", "fifth@mail.swift"]
-let phone = ["9102345678", "9201345678", "9301245678", "9401235678", "9501234678"]
+private extension Person {
+    enum Constants {
+        static let name = ["Дмитрий", "Олег", "Андрей", "Александр", "Антон"]
+        static let secondName = ["Ахмеров", "Русских", "Уваров", "Нихаев", "Сунгуров"]
+        static let mail = ["first@mail.swift", "second@mail.swift", "third@mail.swift", "fourth@mail.swift", "fifth@mail.swift"]
+        static let phone = ["9102345678", "9201345678", "9301245678", "9401235678", "9501234678"]
+    }
+}
 
 
 
