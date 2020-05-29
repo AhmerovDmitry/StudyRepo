@@ -21,19 +21,25 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PersonsList", for: indexPath)
         let person = persons[indexPath.row]
-        
+
         cell.textLabel?.text = person.fullName
-        
+
         return cell
     }
 
     // MARK: - Navigation
 
+//    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+//        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//            if let indexPath = tableView.indexPathForSelectedRow, let detailVC = segue.destination as? DetailViewController {
+//                detailVC.personInfo = persons[indexPath.row]
+//            }
+//        }
+//    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let indexPath = tableView.indexPathForSelectedRow {
-            let detailVC = segue.destination as! DetailViewController
+        if let indexPath = tableView.indexPathForSelectedRow, let detailVC = segue.destination as? DetailViewController {
             detailVC.personInfo = persons[indexPath.row]
         }
     }
-
 }
