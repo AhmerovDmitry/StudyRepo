@@ -14,21 +14,7 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvt-HG-IpG">
-                                <rect key="frame" x="87" y="248" width="240" height="240"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nvt-HG-IpG" secondAttribute="trailing" constant="87" id="9HM-ad-UhB"/>
-                            <constraint firstItem="nvt-HG-IpG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B4M-xg-of2"/>
-                            <constraint firstItem="nvt-HG-IpG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="EDG-ME-l24"/>
-                            <constraint firstItem="nvt-HG-IpG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="204" id="Ics-Hw-PNE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nvt-HG-IpG" secondAttribute="bottom" constant="248" id="rXf-T8-DlF"/>
-                            <constraint firstItem="nvt-HG-IpG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wFs-bP-3Az"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="LJi-ex-QqO">
@@ -38,9 +24,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="colorLabel" destination="nvt-HG-IpG" id="rBr-ZZ-SPk"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

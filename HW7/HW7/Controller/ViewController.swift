@@ -10,13 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var colorLabel: UIView!
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
+    }
+    
     @IBAction func saveData(_ unwindSegue: UIStoryboardSegue) {
         if let source = unwindSegue.source as? TableViewController {
-            colorLabel.backgroundColor = source.mainLabel.backgroundColor
+            self.view.backgroundColor = source.mainLabel.backgroundColor
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let color = segue.destination as? TableViewController {
+            color.colorLabel = self.view.backgroundColor
+        }
+    }
+    
 }
 
 

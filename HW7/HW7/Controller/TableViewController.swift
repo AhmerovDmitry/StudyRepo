@@ -15,6 +15,39 @@ class TableViewController: UITableViewController {
     @IBOutlet var changeValueLabel: [UILabel]!
     @IBOutlet var changeValueTextField: [UITextField]!
     
+    var colorLabel: UIColor?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        mainLabel.layer.cornerRadius = 25
+        mainLabel.backgroundColor = colorLabel
+        for index in 0...2 {
+            changeValueLabel[index].text = "127"
+            changeValueTextField[index].text = "127"
+        }
+        RGBColor()
+    }
+    
+    func RGBColor() {
+        var fRed: CGFloat = 0
+        var fGreen: CGFloat = 0
+        var fBlue: CGFloat = 0
+        var fAlpha: CGFloat = 0
+        
+        if (mainLabel.backgroundColor?.getRed(&fRed, green: &fGreen, blue: &fBlue, alpha: &fAlpha))! {
+
+            sliderForChangeColor[0].value = Float(fRed)
+            sliderForChangeColor[1].value = Float(fGreen)
+            sliderForChangeColor[2].value = Float(fBlue)
+            
+            for index in 0...sliderForChangeColor.count - 1 {
+                changeValueLabel[index].text = String(Int((sliderForChangeColor[index].value) * Float(255)))
+                changeValueTextField[index].text = changeValueLabel[index].text
+            }
+        }
+    }
+    
     @IBAction func changeValueSlider() {
         mainLabel.backgroundColor = UIColor(
             red: CGFloat(sliderForChangeColor[0].value),
@@ -22,13 +55,12 @@ class TableViewController: UITableViewController {
             blue: CGFloat(sliderForChangeColor[2].value),
             alpha: 1
         )
-        
+
         for index in 0...2 {
             changeValueLabel[index].text = String(Int((sliderForChangeColor[index].value) * Float(255)))
-            changeValueTextField[index].text = String(Int((sliderForChangeColor[index].value) * Float(255)))
+            changeValueTextField[index].text = changeValueLabel[index].text
         }
     }
-
     
     // MARK: - Table view data source
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +69,4 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    // MARK: - Navigation
-    
 }

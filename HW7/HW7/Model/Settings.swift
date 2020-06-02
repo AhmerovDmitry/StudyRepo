@@ -8,23 +8,6 @@
 
 import UIKit
 
-class Settings: TableViewController {
-    
-}
-
-
 extension TableViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        mainLabel.layer.cornerRadius = 25
-        mainLabel.backgroundColor = UIColor(red: 0.5,
-                                            green: 0.5,
-                                            blue: 0.5,
-                                            alpha: 1)
-        for index in 0...2 {
-            changeValueLabel[index].text = "127"
-            changeValueTextField[index].text = "127"
-        }
-    }
+
 }
