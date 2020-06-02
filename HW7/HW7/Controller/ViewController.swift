@@ -24,6 +24,9 @@ class ViewController: UIViewController, TableViewControllerDelegate {
     func update(color: UIColor) {
         self.view.backgroundColor = color
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 }
 
 // MARK: - Protocol
