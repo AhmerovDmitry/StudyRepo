@@ -20,7 +20,7 @@
                     <navigationItem key="navigationItem" id="LJi-ex-QqO">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="cyU-q9-ZsY">
                             <connections>
-                                <segue destination="Kxf-J2-ra5" kind="presentation" modalPresentationStyle="fullScreen" id="670-bi-3jr"/>
+                                <segue destination="Kxf-J2-ra5" kind="show" identifier="getDataSegue" id="Z8d-En-hh3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -295,7 +295,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <state key="normal" title="Done"/>
                                                     <connections>
-                                                        <segue destination="vaI-21-80f" kind="unwind" unwindAction="saveData:" id="VPb-jG-wDP"/>
+                                                        <action selector="pressButtonWithSender:" destination="Kxf-J2-ra5" eventType="touchUpInside" id="ULm-rD-KwL"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -330,14 +330,14 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N1j-lj-Lb2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="vaI-21-80f" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1925" y="104"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Pv-al-aUU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U1l-9x-hQZ" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kyp-n0-L9e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="NaviVC" automaticallyAdjustsScrollViewInsets="NO" id="U1l-9x-hQZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="u0U-vN-602"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nek-26-UXX">
@@ -349,7 +349,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vgZ-EG-keU"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kyp-n0-L9e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="103.53260869565219"/>
         </scene>
