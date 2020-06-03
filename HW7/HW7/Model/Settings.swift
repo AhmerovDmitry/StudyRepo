@@ -26,3 +26,17 @@
 //            }
 //        }
 //    }
+
+extension TableViewController {
+    
+    func countsOfElements() -> Int {
+        return sliderForChangeColor.count - 1
+    }
+    
+    func changeValueInLabelAndTextField() {
+        for index in 0...countsOfElements() {
+            changeValueLabel[index].text = String(Int((sliderForChangeColor[index].value) * Float(255)))
+            changeValueTextField[index].text = changeValueLabel[index].text
+        }
+    }
+}

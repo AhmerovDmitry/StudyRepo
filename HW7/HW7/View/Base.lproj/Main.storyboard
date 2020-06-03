@@ -105,7 +105,7 @@
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="cXp-q2-Arm"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
@@ -168,7 +168,7 @@
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="Hj7-tS-xXf"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
@@ -231,7 +231,7 @@
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="NXF-Ck-qFe"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
@@ -336,7 +336,6 @@
         <!--Navigation Controller-->
         <scene sceneID="5Pv-al-aUU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kyp-n0-L9e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="NaviVC" automaticallyAdjustsScrollViewInsets="NO" id="U1l-9x-hQZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="u0U-vN-602"/>
@@ -349,6 +348,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vgZ-EG-keU"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kyp-n0-L9e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="103.53260869565219"/>
         </scene>

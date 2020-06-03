@@ -19,16 +19,20 @@ class TableViewController: UITableViewController {
     @IBOutlet var changeValueLabel: [UILabel]!
     @IBOutlet var changeValueTextField: [UITextField]!
     
+    
+    
     // MARK: - viewDidLoar()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mainLabel.layer.cornerRadius = 25
-        for index in 0...2 {
+        for index in 0...countsOfElements() {
             changeValueLabel[index].text = "127"
             changeValueTextField[index].text = "127"
         }
+        changeMainLabel(color: RGBColor!)
     }
+    
     // MARK: - Sliders
     @IBAction func changeValueSlider() {
         mainLabel.backgroundColor = UIColor(
@@ -37,12 +41,31 @@ class TableViewController: UITableViewController {
             blue: CGFloat(sliderForChangeColor[2].value),
             alpha: 1
         )
-        for index in 0...2 {
-            changeValueLabel[index].text = String(Int((sliderForChangeColor[index].value) * Float(255)))
-            changeValueTextField[index].text = changeValueLabel[index].text
+        changeValueInLabelAndTextField()
+    }
+
+    // MARK: - Change color after change of View
+    var RGBColor: UIColor?
+    
+    func changeMainLabel(color: UIColor) {
+        mainLabel.backgroundColor = color
+        
+        var fRed: CGFloat = 0
+        var fGreen: CGFloat = 0
+        var fBlue: CGFloat = 0
+        var fAlpha: CGFloat = 0
+        
+        if mainLabel.backgroundColor?.getRed(&fRed, green: &fGreen, blue: &fBlue, alpha: &fAlpha) != nil {
+            sliderForChangeColor[0].value = Float(fRed)
+            sliderForChangeColor[1].value = Float(fGreen)
+            sliderForChangeColor[2].value = Float(fBlue)
+            mainLabel.alpha = fAlpha
+            
+            changeValueInLabelAndTextField()
         }
     }
     
+    // MARK: - Delegate
     var delegate: TableViewControllerDelegate?
     
     @IBAction func pressButton(sender: UIButton) {
@@ -52,7 +75,7 @@ class TableViewController: UITableViewController {
         }
     }
     
-    // MARK: - Table view data source
+    // MARK: - Table view data source (setNavigationBarHidden & deselectRow)
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
