@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         colorView.layer.cornerRadius = 20
         colorView.backgroundColor = .black
         // slider settings
-        valueRange(max: 1, and: 0)
+        valueRange(max: 1, andMin: 0)
         // text field settings
         for (index, field) in arrayTextField.enumerated() {
             field.keyboardType = .numberPad
@@ -37,7 +37,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         addTapGestureToHideKeyboard()
     }
     // change max and min value in slider
-    func valueRange(max: Float, and min: Float) {
+    func valueRange(max: Float, andMin min: Float) {
         for value in arraySlider {
             value.maximumValue = max
             value.minimumValue = min
