@@ -20,7 +20,7 @@
                     <navigationItem key="navigationItem" id="LJi-ex-QqO">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="cyU-q9-ZsY">
                             <connections>
-                                <segue destination="Kxf-J2-ra5" kind="show" identifier="getDataSegue" id="Z8d-En-hh3"/>
+                                <segue destination="Kxf-J2-ra5" kind="show" identifier="" id="Z8d-En-hh3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -96,7 +96,7 @@
                                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="YRO-F8-vHm"/>
                                                             </constraints>
                                                             <connections>
-                                                                <action selector="changeValueSlider" destination="Kxf-J2-ra5" eventType="valueChanged" id="0YO-z6-wmI"/>
+                                                                <action selector="setColor" destination="Kxf-J2-ra5" eventType="valueChanged" id="0YO-z6-wmI"/>
                                                             </connections>
                                                         </slider>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bOt-SX-mef">
@@ -106,9 +106,6 @@
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                            <connections>
-                                                                <action selector="ChangeTextFieldInfo" destination="Kxf-J2-ra5" eventType="editingDidEnd" id="fgK-DA-xzE"/>
-                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
@@ -162,7 +159,7 @@
                                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="roD-Yk-sS8"/>
                                                             </constraints>
                                                             <connections>
-                                                                <action selector="changeValueSlider" destination="Kxf-J2-ra5" eventType="valueChanged" id="7kA-of-vgC"/>
+                                                                <action selector="setColor" destination="Kxf-J2-ra5" eventType="valueChanged" id="7kA-of-vgC"/>
                                                             </connections>
                                                         </slider>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iIn-BT-HhU">
@@ -225,7 +222,7 @@
                                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="jPN-WQ-xWG"/>
                                                             </constraints>
                                                             <connections>
-                                                                <action selector="changeValueSlider" destination="Kxf-J2-ra5" eventType="valueChanged" id="Ekq-RR-KRm"/>
+                                                                <action selector="setColor" destination="Kxf-J2-ra5" eventType="valueChanged" id="Ekq-RR-KRm"/>
                                                             </connections>
                                                         </slider>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FYv-xB-EgH">
@@ -299,6 +296,7 @@
                                                     <state key="normal" title="Done"/>
                                                     <connections>
                                                         <action selector="pressButtonWithSender:" destination="Kxf-J2-ra5" eventType="touchUpInside" id="ULm-rD-KwL"/>
+                                                        <segue destination="eMi-bg-lIJ" kind="unwind" unwindAction="unwindToViewController:" id="ygM-L1-XSf"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -321,18 +319,19 @@
                     <navigationItem key="navigationItem" id="eUQ-Jm-ZZw"/>
                     <connections>
                         <outlet property="mainLabel" destination="3QZ-tJ-oWf" id="ES7-QP-Wff"/>
-                        <outletCollection property="sliderForChangeColor" destination="2IN-Qy-qOw" collectionClass="NSMutableArray" id="H4j-Ub-kWe"/>
-                        <outletCollection property="changeValueLabel" destination="2Ik-UD-Sd0" collectionClass="NSMutableArray" id="7bU-yA-bF8"/>
-                        <outletCollection property="changeValueTextField" destination="bOt-SX-mef" collectionClass="NSMutableArray" id="RAa-OE-eQh"/>
-                        <outletCollection property="sliderForChangeColor" destination="HJM-Lc-msg" collectionClass="NSMutableArray" id="oyb-Br-b3B"/>
-                        <outletCollection property="sliderForChangeColor" destination="urO-C3-wgs" collectionClass="NSMutableArray" id="kNc-BX-PQm"/>
-                        <outletCollection property="changeValueLabel" destination="hfS-ze-tBD" collectionClass="NSMutableArray" id="wNL-sX-5q2"/>
-                        <outletCollection property="changeValueLabel" destination="98w-UI-kDc" collectionClass="NSMutableArray" id="lDi-m8-MJt"/>
-                        <outletCollection property="changeValueTextField" destination="iIn-BT-HhU" collectionClass="NSMutableArray" id="I3K-iQ-NPp"/>
-                        <outletCollection property="changeValueTextField" destination="FYv-xB-EgH" collectionClass="NSMutableArray" id="SsS-XC-2Z4"/>
+                        <outletCollection property="sliders" destination="2IN-Qy-qOw" collectionClass="NSMutableArray" id="H4j-Ub-kWe"/>
+                        <outletCollection property="sliders" destination="HJM-Lc-msg" collectionClass="NSMutableArray" id="oyb-Br-b3B"/>
+                        <outletCollection property="sliders" destination="urO-C3-wgs" collectionClass="NSMutableArray" id="kNc-BX-PQm"/>
+                        <outletCollection property="labels" destination="2Ik-UD-Sd0" collectionClass="NSMutableArray" id="Kyw-fV-aRZ"/>
+                        <outletCollection property="labels" destination="hfS-ze-tBD" collectionClass="NSMutableArray" id="ekR-4a-VR9"/>
+                        <outletCollection property="labels" destination="98w-UI-kDc" collectionClass="NSMutableArray" id="6Ph-KE-7lE"/>
+                        <outletCollection property="textFields" destination="bOt-SX-mef" collectionClass="NSMutableArray" id="Smp-uc-rvg"/>
+                        <outletCollection property="textFields" destination="iIn-BT-HhU" collectionClass="NSMutableArray" id="AIC-lX-4mE"/>
+                        <outletCollection property="textFields" destination="FYv-xB-EgH" collectionClass="NSMutableArray" id="lvy-6j-TTW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N1j-lj-Lb2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="eMi-bg-lIJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1925" y="104"/>
         </scene>

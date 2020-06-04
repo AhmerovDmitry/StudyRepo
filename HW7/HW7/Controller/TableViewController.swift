@@ -11,26 +11,27 @@ import UIKit
 class TableViewController: UITableViewController {
     
     @IBOutlet weak var mainLabel: UIView!
-    @IBOutlet var sliderForChangeColor: [UISlider]!
-    @IBOutlet var changeValueLabel: [UILabel]!
-    @IBOutlet var changeValueTextField: [UITextField]!
+    @IBOutlet var sliders: [UISlider]!
+    @IBOutlet var labels: [UILabel]!
+    @IBOutlet var textFields: [UITextField]!
     
-    var RGBColor: UIColor?
+    var colorFromMainLabel: UIColor!
     var delegate: TableViewControllerDelegate?
-    var colorCastNumber = 255
+    var colorCastNumber: Float = 255
     
     // MARK: - viewDidLoar()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mainLabel.layer.cornerRadius = 25
+        mainLabel.backgroundColor = colorFromMainLabel
+        
+        setValueForSlider()
+        valuesForLabelsAndTextFields()
+        
         for index in 0...countsOfElements() {
-            changeValueLabel[index].text = "127"
-            changeValueTextField[index].text = "127"
-            
-            changeValueTextField[index].addTarget(self, action: #selector(ChangeTextFieldInfo), for: .editingChanged)
+            textFields[index].addTarget(self, action: #selector(ChangeTextFieldInfo), for: .editingChanged)
         }
-        changeMainLabel(color: RGBColor!)
     }
     
     // MARK: - Table view data source (setNavigationBarHidden & deselectRow)

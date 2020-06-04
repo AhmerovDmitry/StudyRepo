@@ -10,23 +10,24 @@ import UIKit
 
 class ViewController: UIViewController, TableViewControllerDelegate {
     
-    // MARK: - viewDidLoar()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
-    }
-    
-    // MARK: - Prepare for segue
+    // MARK: - prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "getDataSegue", let destination = segue.destination as? TableViewController {
-            destination.delegate = self
-            destination.RGBColor = self.view.backgroundColor
+        if let destination = segue.destination as? TableViewController {
+            destination.colorFromMainLabel = view.backgroundColor
         }
     }
     
+    // MARK: - unwindSegue
+    @IBAction func unwindToViewController(_ unwindSegue: UIStoryboardSegue) {
+        if let sourceViewController = unwindSegue.source as? TableViewController {
+            sourceViewController.delegate = self
+            sourceViewController.setColor()
+        }
+    }
+
     // MARK: - Delegate method (update(color: UIColor))
     func update(color: UIColor) {
-        self.view.backgroundColor = color
+        view.backgroundColor = color
     }
     
     // MARK: - setNavigationBarHidden
