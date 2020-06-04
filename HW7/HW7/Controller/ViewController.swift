@@ -15,6 +15,7 @@ class ViewController: UIViewController, TableViewControllerDelegate {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
     }
+    
     // MARK: - Prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "getDataSegue", let destination = segue.destination as? TableViewController {
@@ -22,14 +23,14 @@ class ViewController: UIViewController, TableViewControllerDelegate {
             destination.RGBColor = self.view.backgroundColor
         }
     }
+    
     // MARK: - Delegate method (update(color: UIColor))
     func update(color: UIColor) {
         self.view.backgroundColor = color
     }
+    
     // MARK: - setNavigationBarHidden
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
-    
-    
 }

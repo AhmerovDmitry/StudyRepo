@@ -106,6 +106,9 @@
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            <connections>
+                                                                <action selector="ChangeTextFieldInfo" destination="Kxf-J2-ra5" eventType="editingDidEnd" id="fgK-DA-xzE"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
