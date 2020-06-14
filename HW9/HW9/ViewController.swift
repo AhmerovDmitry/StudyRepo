@@ -6,7 +6,7 @@
 //  Copyright © 2020 Дмитрий Ахмеров. All rights reserved.
 //
 
-import UIKit
+import Spring
 
 class ViewController: UIViewController {
 
@@ -15,6 +15,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBOutlet weak var animationView: SpringView!
+    @IBOutlet weak var nameForAnimation: UILabel!
+    
+    @IBAction func buttonForAnimation(_ sender: SpringButton) {
+        
+        randomAnimation()
+        
+    }
+    
 }
-
