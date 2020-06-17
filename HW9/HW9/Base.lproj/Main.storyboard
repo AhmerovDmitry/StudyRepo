@@ -60,6 +60,7 @@
                     <connections>
                         <outlet property="animationView" destination="mgS-Id-P6b" id="Hys-Ya-aS2"/>
                         <outlet property="nameForAnimation" destination="DVB-28-3d8" id="gm9-oK-fn6"/>
+                        <outlet property="runButtonOutlet" destination="yCH-jR-ufr" id="Z57-U4-zsu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

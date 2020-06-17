@@ -9,16 +9,21 @@
 import Spring
 
 class ViewController: UIViewController {
+    
+    var index = 0
 
     // MARK: - @IBOutlets
     
     @IBOutlet weak var animationView: SpringView!
     @IBOutlet weak var nameForAnimation: UILabel!
+    @IBOutlet weak var runButtonOutlet: UIButton!
     
     // MARK: - @IBActions
     
     @IBAction func buttonForAnimation(_ sender: SpringButton) {
+        
         randomAnimation()
+        
     }
     
 }

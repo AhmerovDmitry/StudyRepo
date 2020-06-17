@@ -12,6 +12,7 @@ extension ViewController {
     
     func randomAnimation() {
         var animationName = ""
+        var nextAnimationName = ""
         
         let animations = [
             "shake", "pop",
@@ -28,13 +29,27 @@ extension ViewController {
             "fadeInUp", "zoomIn",
             "zoomOut", "flash"
         ]
-        let indexForAnimation = Int.random(in: 0...animations.count - 1)
+        //let indexForAnimation = Int.random(in: 0...animations.count - 1)
 
-        animationName = animations[indexForAnimation]
+        //animationName = animations[indexForAnimation]
+        //nextAnimationName = animations[indexForAnimation]
+        
+        if index > animations.count - 1 {
+            index = 0
+            animationName = animations[index]
+            nextAnimationName = animations[index]
+        } else {
+            animationName = animations[index]
+            nextAnimationName = animations[index + 1]
+            print(index)
+        }
+        
         nameForAnimation.text = "Animation: \(animationName)"
+        runButtonOutlet.setTitle(nextAnimationName, for: .normal)
         animationView.animation = animationName
         animationView.animate()
         
+        index += 1
     }
     
 }
