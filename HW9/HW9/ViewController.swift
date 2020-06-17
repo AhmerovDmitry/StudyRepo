@@ -10,18 +10,15 @@ import Spring
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
+    // MARK: - @IBOutlets
+    
     @IBOutlet weak var animationView: SpringView!
     @IBOutlet weak var nameForAnimation: UILabel!
     
+    // MARK: - @IBActions
+    
     @IBAction func buttonForAnimation(_ sender: SpringButton) {
-        
         randomAnimation()
-        
     }
     
 }
