@@ -16,7 +16,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var firstTextField: UITextField!
     @IBOutlet weak var secondTextField: UITextField!
     
-    
     // MARK: - @IBActions
     
     @IBAction func resultButton(_ sender: UIButton) {
