@@ -6,15 +6,24 @@
 //  Copyright © 2020 Дмитрий Ахмеров. All rights reserved.
 //
 
-import UIKit
+import Spring
 
 class ViewController: UIViewController {
+    
+    var index = 0
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    // MARK: - @IBOutlets
+    
+    @IBOutlet weak var animationView: SpringView!
+    @IBOutlet weak var nameForAnimation: UILabel!
+    @IBOutlet weak var runButtonOutlet: UIButton!
+    
+    // MARK: - @IBActions
+    
+    @IBAction func buttonForAnimation(_ sender: SpringButton) {
+        
+        randomAnimation()
+        
     }
-
-
+    
 }
-
