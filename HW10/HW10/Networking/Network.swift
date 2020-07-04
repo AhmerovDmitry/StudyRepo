@@ -27,7 +27,6 @@ class NetworkService {
                         print("Failed to decode JSON", jsonError)
                         completion(.failure(jsonError))
                     }
-                    
                 }
             }.resume()
         }

@@ -28,6 +28,7 @@ class MainViewController: UITableViewController {
                 print("error:", error)
             }
         }
+        
     }
 
     // MARK: - Table view data source
@@ -42,7 +43,6 @@ class MainViewController: UITableViewController {
         
         cell.textLabel?.text = name?.name
         cell.detailTextLabel?.text = name?.species
-        
         
         return cell
     }
