@@ -11,6 +11,6 @@ struct JsonCharacters: Decodable {
 }
 struct Character: Decodable {
     let name: String?
-    let image: String?
     let species: String?
+    let image: String?
 }

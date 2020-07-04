@@ -10,17 +10,15 @@ import UIKit
 
 class MainViewController: UITableViewController {
     
+    let jsonUrl = "https://rickandmortyapi.com/api/character"
     let networkService = NetworkService()
     var searachResponse: JsonCharacters? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let jsonUrl = "https://rickandmortyapi.com/api/character"
 
         networkService.fetchData(urlString: jsonUrl) { [weak self] (result) in
             switch result {
-                
             case .success(let searchResponse):
                 self?.searachResponse = searchResponse
                 self?.tableView.reloadData()
@@ -28,7 +26,6 @@ class MainViewController: UITableViewController {
                 print("error:", error)
             }
         }
-        
     }
 
     // MARK: - Table view data source
@@ -41,8 +38,14 @@ class MainViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let name = searachResponse?.results![indexPath.row]
         
+        if let image = self.networkService.getImage(from: (name?.image)!) {
+        cell.imageView!.image = image
+        }
+        
         cell.textLabel?.text = name?.name
         cell.detailTextLabel?.text = name?.species
+        
+        
         
         return cell
     }
@@ -50,4 +53,5 @@ class MainViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+
 }
