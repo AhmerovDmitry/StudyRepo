@@ -13,10 +13,11 @@ class MainViewController: UITableViewController {
     let jsonUrl = "https://rickandmortyapi.com/api/character"
     let networkService = NetworkService()
     var searachResponse: JsonCharacters? = nil
+    let character = CharacterCell()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         networkService.fetchData(urlString: jsonUrl) { [weak self] (result) in
             switch result {
             case .success(let searchResponse):
@@ -39,14 +40,14 @@ class MainViewController: UITableViewController {
         let name = searachResponse?.results![indexPath.row]
         
         if let image = self.networkService.getImage(from: (name?.image)!) {
-        cell.imageView!.image = image
+            cell.imageView!.image = image
+        } else {
+            print("Load image!!!")
         }
         
         cell.textLabel?.text = name?.name
         cell.detailTextLabel?.text = name?.species
-        
-        
-        
+                
         return cell
     }
     

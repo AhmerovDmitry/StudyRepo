@@ -32,11 +32,7 @@ class NetworkService {
     }
     
     func getImage(from string: String) -> UIImage? {
-        guard let url = URL(string: string)
-            else {
-                print("Unable to create URL")
-                return nil
-        }
+        guard let url = URL(string: string) else { return nil }
         var image: UIImage? = nil
         do {
             let data = try Data(contentsOf: url, options: [])
@@ -47,5 +43,5 @@ class NetworkService {
         }
         return image
     }
-    
+
 }
