@@ -7,9 +7,9 @@
 //
 
 struct JsonCharacters: Decodable {
-    let results: [Character]?
+    let results: [CharacterUrlInfo]?
 }
-struct Character: Decodable {
+struct CharacterUrlInfo: Decodable {
     let name: String?
     let species: String?
     let image: String?

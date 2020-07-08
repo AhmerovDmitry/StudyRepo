@@ -12,8 +12,7 @@ class MainViewController: UITableViewController {
     
     let jsonUrl = "https://rickandmortyapi.com/api/character"
     let networkService = NetworkService()
-    var searachResponse: JsonCharacters? = nil
-    let character = CharacterCell()
+    var searchResponse: JsonCharacters? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +20,7 @@ class MainViewController: UITableViewController {
         networkService.fetchData(urlString: jsonUrl) { [weak self] (result) in
             switch result {
             case .success(let searchResponse):
-                self?.searachResponse = searchResponse
+                self?.searchResponse = searchResponse
                 self?.tableView.reloadData()
             case .failure(let error):
                 print("error:", error)
@@ -32,22 +31,13 @@ class MainViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searachResponse?.results?.count ?? 0
+        return searchResponse?.results?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CharacterCell
-//        let name = searachResponse?.results![indexPath.row]
-//
-//        if let image = self.networkService.getImage(from: (name?.image)!) {
-//            cell.imageView!.image = image
-//        } else {
-//            print("Load image!!!")
-//        }
-//
-//        cell.textLabel?.text = name?.name
-//        cell.detailTextLabel?.text = name?.species
-        let character = searachResponse?.results?[indexPath.row]
+
+        let character = searchResponse?.results?[indexPath.row]
         cell.configure(with: character!)
                 
         return cell
@@ -57,4 +47,12 @@ class MainViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let characterInfoVC = segue.destination as! CharaterInfoViewController
+            characterInfoVC.characterInfo = searchResponse?.results![indexPath.row]
+        }
+    }
 }

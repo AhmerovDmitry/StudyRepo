@@ -15,7 +15,7 @@ class CharacterCell: UITableViewCell {
     @IBOutlet weak var characterImage: UIImageView?
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView?
     
-    func configure(with character: Character) {
+    func configure(with character: CharacterUrlInfo) {
         characterName?.text = character.name
         characterSubtitle?.text = character.species
         
