@@ -15,4 +15,21 @@ class CharacterCell: UITableViewCell {
     @IBOutlet weak var characterImage: UIImageView?
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView?
     
+    func configure(with character: Character) {
+        characterName?.text = character.name
+        characterSubtitle?.text = character.species
+        
+        activityIndicator?.startAnimating()
+        
+        DispatchQueue.global().async {
+            guard let imageURL = URL(string: character.image!) else { return }
+            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+            
+            DispatchQueue.main.async {
+                self.characterImage?.image = UIImage(data: imageData)
+                self.activityIndicator?.stopAnimating()
+            }
+        }
+    }
+    
 }

@@ -17,7 +17,7 @@ class MainViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         networkService.fetchData(urlString: jsonUrl) { [weak self] (result) in
             switch result {
             case .success(let searchResponse):
@@ -34,19 +34,21 @@ class MainViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searachResponse?.results?.count ?? 0
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let name = searachResponse?.results![indexPath.row]
-        
-        if let image = self.networkService.getImage(from: (name?.image)!) {
-            cell.imageView!.image = image
-        } else {
-            print("Load image!!!")
-        }
-        
-        cell.textLabel?.text = name?.name
-        cell.detailTextLabel?.text = name?.species
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CharacterCell
+//        let name = searachResponse?.results![indexPath.row]
+//
+//        if let image = self.networkService.getImage(from: (name?.image)!) {
+//            cell.imageView!.image = image
+//        } else {
+//            print("Load image!!!")
+//        }
+//
+//        cell.textLabel?.text = name?.name
+//        cell.detailTextLabel?.text = name?.species
+        let character = searachResponse?.results?[indexPath.row]
+        cell.configure(with: character!)
                 
         return cell
     }
