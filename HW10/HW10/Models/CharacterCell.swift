@@ -12,7 +12,7 @@ class CharacterCell: UITableViewCell {
 
     @IBOutlet weak var characterName: UILabel?
     @IBOutlet weak var characterSubtitle: UILabel?
-    @IBOutlet weak var characterImage: UIImageView?
+    @IBOutlet weak var characterImage: ImageView?
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView?
     
     func configure(with character: CharacterUrlInfo) {
@@ -21,15 +21,17 @@ class CharacterCell: UITableViewCell {
         
         activityIndicator?.startAnimating()
         
-        DispatchQueue.global().async {
-            guard let imageURL = URL(string: character.image!) else { return }
-            guard let imageData = try? Data(contentsOf: imageURL) else { return }
-            
-            DispatchQueue.main.async {
-                self.characterImage?.image = UIImage(data: imageData)
-                self.activityIndicator?.stopAnimating()
-            }
-        }
+//        DispatchQueue.global().async {
+//            guard let imageURL = URL(string: character.image!) else { return }
+//            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+//
+//            DispatchQueue.main.async {
+//                self.characterImage?.image = UIImage(data: imageData)
+//                self.activityIndicator?.stopAnimating()
+//            }
+//        }
+        
+        characterImage?.fetchImage(with: character.image)
     }
     
 }
