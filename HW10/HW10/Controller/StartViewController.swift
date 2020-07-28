@@ -16,7 +16,8 @@ class StartViewController: UIViewController {
 
     @IBAction func startButton(_ sender: UIButton) {
         UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseIn, animations: {
-            self.starshipView.frame.origin.y += 250
+            //self.starshipView.frame.origin.y += 250
+            self.starshipView.frame.origin.y = self.startButtonOutlet.frame.origin.y
             self.starshipView.frame.size.height -= 127
         }, completion: { finished in
             self.performSegue(withIdentifier: "MainVC", sender: self)
