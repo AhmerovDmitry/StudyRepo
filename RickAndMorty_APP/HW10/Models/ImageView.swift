@@ -9,7 +9,6 @@
 import UIKit
 
 class ImageView: UIImageView {
-    
     func fetchImage(with url: String?) {
         guard let url = url else { return }
         guard let imageURL = url.getURL() else {

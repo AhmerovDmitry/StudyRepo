@@ -20,13 +20,13 @@
 		BC4CDB6D24F4F9DF00BCA8E1 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CDB6C24F4F9DF00BCA8E1 /* CustomCell.swift */; };
 		BC4CDB7224F529CB00BCA8E1 /* BaseViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CDB7124F529CB00BCA8E1 /* BaseViewControllerDelegate.swift */; };
 		BC4CDB7424F55AE000BCA8E1 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CDB7324F55AE000BCA8E1 /* UIButton.swift */; };
+		BC67837124F562AD00538AB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC67837024F562AD00538AB0 /* AppDelegate.swift */; };
+		BC67837324F562BB00538AB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC67837224F562BB00538AB0 /* SceneDelegate.swift */; };
+		BC7DCE3924F55FFE00E2E08D /* AnimateChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7DCE3824F55FFE00E2E08D /* AnimateChildView.swift */; };
 		BC7FE20224EF0BC900996C45 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7FE20124EF0BC900996C45 /* BaseViewController.swift */; };
 		BC8FB10A24F469FA0051AADE /* BaseViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8FB10924F469FA0051AADE /* BaseViewControllerDataSource.swift */; };
 		BC8FB10C24F46A380051AADE /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8FB10B24F46A380051AADE /* UIViewController.swift */; };
 		BCC814D524BF9F69009B1FCC /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC814D424BF9F69009B1FCC /* ImageView.swift */; };
-		BCE4891824F1C15D00A087E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4891624F1C15D00A087E2 /* SceneDelegate.swift */; };
-		BCE4891A24F1C1CF00A087E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4891924F1C1CF00A087E2 /* AppDelegate.swift */; };
-		BCE4891C24F4013F00A087E2 /* AnimationChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4891B24F4013F00A087E2 /* AnimationChildView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,13 +45,13 @@
 		BC4CDB6C24F4F9DF00BCA8E1 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		BC4CDB7124F529CB00BCA8E1 /* BaseViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerDelegate.swift; sourceTree = "<group>"; };
 		BC4CDB7324F55AE000BCA8E1 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		BC67837024F562AD00538AB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC67837224F562BB00538AB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BC7DCE3824F55FFE00E2E08D /* AnimateChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateChildView.swift; sourceTree = "<group>"; };
 		BC7FE20124EF0BC900996C45 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BC8FB10924F469FA0051AADE /* BaseViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerDataSource.swift; sourceTree = "<group>"; };
 		BC8FB10B24F46A380051AADE /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		BCC814D424BF9F69009B1FCC /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
-		BCE4891624F1C15D00A087E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../../.Trash/SceneDelegate.swift; sourceTree = "<group>"; };
-		BCE4891924F1C1CF00A087E2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../.Trash/AppDelegate.swift; sourceTree = "<group>"; };
-		BCE4891B24F4013F00A087E2 /* AnimationChildView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationChildView.swift; path = ../../../../../.Trash/AnimationChildView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,10 +124,10 @@
 		BC03598F24B0BB860009D921 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BCE4891924F1C1CF00A087E2 /* AppDelegate.swift */,
-				BCE4891624F1C15D00A087E2 /* SceneDelegate.swift */,
 				BC03597924B06AE80009D921 /* Assets.xcassets */,
 				BC03597E24B06AE80009D921 /* Info.plist */,
+				BC67837024F562AD00538AB0 /* AppDelegate.swift */,
+				BC67837224F562BB00538AB0 /* SceneDelegate.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -182,7 +182,7 @@
 		BCE4890324F1ADA700A087E2 /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
-				BCE4891B24F4013F00A087E2 /* AnimationChildView.swift */,
+				BC7DCE3824F55FFE00E2E08D /* AnimateChildView.swift */,
 				BC7FE20324EF0BE300996C45 /* BaseController */,
 				BC4339D224F02E79001E707C /* DetailPopController */,
 			);
@@ -261,21 +261,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC4CDB7424F55AE000BCA8E1 /* UIButton.swift in Sources */,
-				BCE4891A24F1C1CF00A087E2 /* AppDelegate.swift in Sources */,
 				BC03598724B06E4B0009D921 /* api.swift in Sources */,
 				BC107A6924BB281D00D75618 /* StartViewController.swift in Sources */,
 				BC03598924B0A1760009D921 /* Network.swift in Sources */,
 				BC3500FE24B26380007C556E /* CharacterCell.swift in Sources */,
 				BC7FE20224EF0BC900996C45 /* BaseViewController.swift in Sources */,
 				BC4CDB6D24F4F9DF00BCA8E1 /* CustomCell.swift in Sources */,
+				BC67837324F562BB00538AB0 /* SceneDelegate.swift in Sources */,
 				BC4339D424F02E98001E707C /* DetailPopController.swift in Sources */,
+				BC67837124F562AD00538AB0 /* AppDelegate.swift in Sources */,
 				BCC814D524BF9F69009B1FCC /* ImageView.swift in Sources */,
 				BC4401FD24B60806007F03FF /* CharaterInfoViewController.swift in Sources */,
 				BC03598524B06B470009D921 /* MainViewController.swift in Sources */,
-				BCE4891C24F4013F00A087E2 /* AnimationChildView.swift in Sources */,
 				BC8FB10A24F469FA0051AADE /* BaseViewControllerDataSource.swift in Sources */,
-				BCE4891824F1C15D00A087E2 /* SceneDelegate.swift in Sources */,
 				BC8FB10C24F46A380051AADE /* UIViewController.swift in Sources */,
+				BC7DCE3924F55FFE00E2E08D /* AnimateChildView.swift in Sources */,
 				BC4CDB7224F529CB00BCA8E1 /* BaseViewControllerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
