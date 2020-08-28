@@ -52,6 +52,14 @@ class CustomCell: UICollectionViewCell {
         
         return btn
     }()
+    //MARK: - Big button image
+    let bigCellButton: UIButton = {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setImage(#imageLiteral(resourceName: "spaceShipImage"), for: .normal)
+        
+        return btn
+    }()
     // MARK: - Init contentView + other view for cell
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -62,17 +70,21 @@ class CustomCell: UICollectionViewCell {
         bg.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         bg.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         
-        bg.addSubview(cellText)
+        [cellText, avatarButton, bigCellButton].forEach { bg.addSubview($0) }
+        
         cellText.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 100).isActive = true
         cellText.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         cellText.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         cellText.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         
-        bg.addSubview(avatarButton)
         avatarButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5).isActive = true
         avatarButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5).isActive = true
         avatarButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5).isActive = true
         avatarButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -120).isActive = true
+        
+        bigCellButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
+        bigCellButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0).isActive = true
+        bigCellButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0).isActive = true
     }
 
     required init?(coder: NSCoder) {

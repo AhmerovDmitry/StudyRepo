@@ -24,6 +24,12 @@ extension BaseViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         cell.avatarButton.addTarget(self, action: #selector(showController), for: .touchUpInside)
         cell.data = self.data[indexPath.row]
         
+        if indexPath.row == 0 || indexPath.row == 4 {
+            cell.avatarButton.removeFromSuperview()
+        } else {
+            cell.bigCellButton.removeFromSuperview()
+        }
+        
         return cell
     }
 

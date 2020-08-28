@@ -12,9 +12,8 @@ import UIKit
 class BaseViewController: UIViewController {
     // MARK: - Properties
     var isMove = false
-
     let data = [
-        CustomData(title: "1", image: UIImageView(image: #imageLiteral(resourceName: "bold")), text: "FIRST"),
+        CustomData(title: "1", image: UIImageView(image: #imageLiteral(resourceName: "bold")), text: "SHIP"),
         CustomData(title: "2", image: UIImageView(image: #imageLiteral(resourceName: "light")), text: ""),
         CustomData(title: "3", image: UIImageView(image: #imageLiteral(resourceName: "light")), text: ""),
         CustomData(title: "4", image: UIImageView(image: #imageLiteral(resourceName: "light")), text: ""),
@@ -43,14 +42,14 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(backgroundImage)
+        [backgroundImage, collectionView].forEach { view.addSubview($0) }
+        
         backgroundImage.contentMode = .scaleAspectFill
         backgroundImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
         backgroundImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         backgroundImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         backgroundImage.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         
-        view.addSubview(collectionView)
         collectionView.backgroundColor = .clear
         collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 177).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 2.5).isActive = true
