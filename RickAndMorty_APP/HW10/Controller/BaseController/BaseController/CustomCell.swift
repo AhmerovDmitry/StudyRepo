@@ -27,7 +27,7 @@ class CustomCell: UICollectionViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.font = UIFont(name: "Futura", size: 35)
+        label.font = UIFont(name: "Futura", size: 30)
         
         return label
     }()
@@ -46,7 +46,9 @@ class CustomCell: UICollectionViewCell {
     let avatarButton: UIButton = {
         let btn = UIButton(type: .system)
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.backgroundColor = .darkGray
+        btn.backgroundColor = .clear
+        btn.layer.borderWidth = 1
+        btn.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         btn.layer.cornerRadius = 20
         btn.setTitle("🚀", for: .normal)
         

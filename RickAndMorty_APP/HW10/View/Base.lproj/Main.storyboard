@@ -10,7 +10,7 @@
         <!--Rick & Morty-->
         <scene sceneID="iMM-pM-rXb">
             <objects>
-                <tableViewController id="qho-Tf-JuC" customClass="MainViewController" customModule="HW10" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="qho-Tf-JuC" customClass="MainViewController" customModule="RickAndMorty_SpaceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="USL-AU-0cu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -18,10 +18,10 @@
                         <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="MYH-ug-vqr" customClass="CharacterCell" customModule="HW10" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="MYH-ug-vqr" customClass="CharacterCell" customModule="RickAndMorty_SpaceApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MYH-ug-vqr" id="mxm-tC-Xxm" customClass="CharacterCell" customModule="HW10" customModuleProvider="target">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MYH-ug-vqr" id="mxm-tC-Xxm" customClass="CharacterCell" customModule="RickAndMorty_SpaceApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -29,7 +29,7 @@
                                             <rect key="frame" x="25" y="12" width="20" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </activityIndicatorView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Pl-pE-InP" customClass="ImageView" customModule="HW10" customModuleProvider="target">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Pl-pE-InP" customClass="ImageView" customModule="RickAndMorty_SpaceApp" customModuleProvider="target">
                                             <rect key="frame" x="20" y="6" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -72,7 +72,7 @@
         <!--Charater Info View Controller-->
         <scene sceneID="sdY-Xq-9Eb">
             <objects>
-                <viewController id="SXy-ay-pj0" customClass="CharaterInfoViewController" customModule="HW10" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SXy-ay-pj0" customClass="CharaterInfoViewController" customModule="RickAndMorty_SpaceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cKM-K1-th8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,17 +81,17 @@
                                 <rect key="frame" x="87" y="183" width="240" height="370"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4s1-A5-aGp">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="255.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="253.66666666666666"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrT-uh-QzI">
-                                        <rect key="frame" x="59" y="292.66666666666669" width="122" height="20"/>
+                                        <rect key="frame" x="59" y="290.66666666666669" width="122" height="20"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character subtitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQx-Ue-gQi">
-                                        <rect key="frame" x="51.666666666666657" y="349.66666666666663" width="137" height="20.333333333333314"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="51.333333333333343" y="347.66666666666663" width="137.33333333333334" height="22.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="17"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -123,7 +123,7 @@
         <!--Base View Controller-->
         <scene sceneID="r19-ff-uJT">
             <objects>
-                <viewController id="SHr-Mr-bWh" customClass="BaseViewController" customModule="HW10" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SHr-Mr-bWh" customClass="BaseViewController" customModule="RickAndMorty_SpaceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xht-dy-WiT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,7 +138,7 @@
         <!--Start View Controller-->
         <scene sceneID="R49-Cd-gVu">
             <objects>
-                <viewController id="CZV-sT-K8Z" customClass="StartViewController" customModule="HW10" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CZV-sT-K8Z" customClass="StartViewController" customModule="RickAndMorty_SpaceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="siv-yg-YUK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

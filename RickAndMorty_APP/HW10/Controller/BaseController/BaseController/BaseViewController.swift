@@ -13,7 +13,7 @@ class BaseViewController: UIViewController {
     // MARK: - Properties
     var isMove = false
     let data = [
-        CustomData(title: "1", image: UIImageView(image: #imageLiteral(resourceName: "bold")), text: "SHIP"),
+        CustomData(title: "1", image: UIImageView(image: #imageLiteral(resourceName: "bold")), text: "SPACESHIP"),
         CustomData(title: "2", image: UIImageView(image: #imageLiteral(resourceName: "light")), text: ""),
         CustomData(title: "3", image: UIImageView(image: #imageLiteral(resourceName: "light")), text: ""),
         CustomData(title: "4", image: UIImageView(image: #imageLiteral(resourceName: "light")), text: ""),
