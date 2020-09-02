@@ -10,17 +10,20 @@ import UIKit
 
 class DeatilPopControllerCell: UICollectionViewCell {
     
+    let detailView = DetailPopController()
+    
     private let bg: UIImageView = {
         let bg = UIImageView()
         bg.frame.size = CGSize(width: 100, height: 100)
         bg.backgroundColor = .yellow
+        bg.layer.cornerRadius = 25
         
         return bg
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+                
         contentView.addSubview(bg)
         bg.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         bg.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true

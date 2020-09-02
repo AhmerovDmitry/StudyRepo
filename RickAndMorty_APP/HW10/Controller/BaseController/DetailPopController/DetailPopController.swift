@@ -47,11 +47,11 @@ class DetailPopController: UIViewController {
         transparentView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         
         transparentView.addSubview(collectionView)
-        collectionView.backgroundColor = .clear
-        collectionView.topAnchor.constraint(equalTo: transparentView.topAnchor, constant: 50).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: transparentView.bottomAnchor, constant: 50).isActive = true
-        collectionView.leadingAnchor.constraint(equalTo: transparentView.leadingAnchor, constant: 50).isActive = true
-        collectionView.trailingAnchor.constraint(equalTo: transparentView.trailingAnchor, constant: 50).isActive = true
+        collectionView.backgroundColor = .blue
+        collectionView.topAnchor.constraint(equalTo: transparentView.topAnchor, constant: 25).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: transparentView.bottomAnchor, constant: 0).isActive = true
+        collectionView.leadingAnchor.constraint(equalTo: transparentView.leadingAnchor, constant: 25).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo: transparentView.trailingAnchor, constant: -25).isActive = true
         collectionView.delegate = self
         collectionView.dataSource = self
     }
