@@ -10,7 +10,7 @@ import UIKit
 
 class DetailPopController: UIViewController {
     
-    lazy fileprivate var transparentView: UIImageView = {
+    fileprivate var transparentView: UIImageView = {
         var image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.backgroundColor = .clear
@@ -19,6 +19,16 @@ class DetailPopController: UIViewController {
         image.layer.cornerRadius = 25
 
         return image
+    }()
+    
+    fileprivate let collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        
+        cv.register(DeatilPopControllerCell.self, forCellWithReuseIdentifier: "cell")
+        
+        return cv
     }()
     
     override func viewDidLoad() {
@@ -35,5 +45,14 @@ class DetailPopController: UIViewController {
         transparentView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         transparentView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         transparentView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        
+        transparentView.addSubview(collectionView)
+        collectionView.backgroundColor = .clear
+        collectionView.topAnchor.constraint(equalTo: transparentView.topAnchor, constant: 50).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: transparentView.bottomAnchor, constant: 50).isActive = true
+        collectionView.leadingAnchor.constraint(equalTo: transparentView.leadingAnchor, constant: 50).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo: transparentView.trailingAnchor, constant: 50).isActive = true
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
 }

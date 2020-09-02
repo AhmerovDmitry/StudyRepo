@@ -24,6 +24,8 @@
 		BC67837324F562BB00538AB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC67837224F562BB00538AB0 /* SceneDelegate.swift */; };
 		BC7DCE3924F55FFE00E2E08D /* AnimateChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7DCE3824F55FFE00E2E08D /* AnimateChildView.swift */; };
 		BC7FE20224EF0BC900996C45 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7FE20124EF0BC900996C45 /* BaseViewController.swift */; };
+		BC83F28B24FA4F27005CB2F2 /* DetailPopControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC83F28A24FA4F27005CB2F2 /* DetailPopControllerDataSource.swift */; };
+		BC83F28D24FAA00B005CB2F2 /* DatailPopControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC83F28C24FAA00B005CB2F2 /* DatailPopControllerCell.swift */; };
 		BC8FB10A24F469FA0051AADE /* BaseViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8FB10924F469FA0051AADE /* BaseViewControllerDataSource.swift */; };
 		BC8FB10C24F46A380051AADE /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8FB10B24F46A380051AADE /* UIViewController.swift */; };
 		BCC814D524BF9F69009B1FCC /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC814D424BF9F69009B1FCC /* ImageView.swift */; };
@@ -49,6 +51,8 @@
 		BC67837224F562BB00538AB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BC7DCE3824F55FFE00E2E08D /* AnimateChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateChildView.swift; sourceTree = "<group>"; };
 		BC7FE20124EF0BC900996C45 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BC83F28A24FA4F27005CB2F2 /* DetailPopControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPopControllerDataSource.swift; sourceTree = "<group>"; };
+		BC83F28C24FAA00B005CB2F2 /* DatailPopControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatailPopControllerCell.swift; sourceTree = "<group>"; };
 		BC8FB10924F469FA0051AADE /* BaseViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerDataSource.swift; sourceTree = "<group>"; };
 		BC8FB10B24F46A380051AADE /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		BCC814D424BF9F69009B1FCC /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				BC4339D324F02E98001E707C /* DetailPopController.swift */,
+				BC83F28C24FAA00B005CB2F2 /* DatailPopControllerCell.swift */,
+				BC83F28A24FA4F27005CB2F2 /* DetailPopControllerDataSource.swift */,
 			);
 			path = DetailPopController;
 			sourceTree = "<group>";
@@ -273,6 +279,8 @@
 				BCC814D524BF9F69009B1FCC /* ImageView.swift in Sources */,
 				BC4401FD24B60806007F03FF /* CharaterInfoViewController.swift in Sources */,
 				BC03598524B06B470009D921 /* MainViewController.swift in Sources */,
+				BC83F28B24FA4F27005CB2F2 /* DetailPopControllerDataSource.swift in Sources */,
+				BC83F28D24FAA00B005CB2F2 /* DatailPopControllerCell.swift in Sources */,
 				BC8FB10A24F469FA0051AADE /* BaseViewControllerDataSource.swift in Sources */,
 				BC8FB10C24F46A380051AADE /* UIViewController.swift in Sources */,
 				BC7DCE3924F55FFE00E2E08D /* AnimateChildView.swift in Sources */,
