@@ -9,6 +9,14 @@
 import UIKit
 
 class DetailPopController: UIViewController {
+    let data = [
+        DetailCustomData(text: "Memory"),
+        DetailCustomData(text: "Cloning"),
+        DetailCustomData(text: "Call Jessica"),
+        DetailCustomData(text: "..."),
+        DetailCustomData(text: "Chat Rick")
+
+    ]
     
     fileprivate var transparentView: UIImageView = {
         var image = UIImageView()
@@ -28,7 +36,7 @@ class DetailPopController: UIViewController {
         layout.minimumLineSpacing = 20
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.translatesAutoresizingMaskIntoConstraints = false
-        cv.register(DeatilPopControllerCell.self, forCellWithReuseIdentifier: "cell")
+        cv.register(DetailCustomCell.self, forCellWithReuseIdentifier: "cell")
         
         return cv
     }()

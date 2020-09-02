@@ -8,26 +8,38 @@
 
 import UIKit
 
-class DeatilPopControllerCell: UICollectionViewCell {
+struct DetailCustomData {
+    var text: String
+}
+
+class DetailCustomCell: UICollectionViewCell {
+    var data: DetailCustomData? {
+        didSet {
+            guard let data = data else { return }
+            cellButton.setTitle(data.text, for: .normal)
+        }
+    }
+    //MARK: - cellButton
+    let cellButton: UIButton = {
+        let btn = UIButton(type: .custom)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.clipsToBounds = true
+        btn.layer.backgroundColor = UIColor.clear.cgColor
+        btn.titleLabel?.font = UIFont(name: "Futura", size: 15)
+        btn.titleLabel?.textAlignment = .center
     
-    let detailView = DetailPopController()
-    
-    private let bg: UIImageView = {
-        let bg = UIImageView()
-        bg.backgroundColor = .clear
-        bg.layer.cornerRadius = 25
-        
-        return bg
+        return btn
     }()
-    
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-                
-        contentView.addSubview(bg)
-        bg.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        bg.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        bg.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        bg.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        
+        contentView.addSubview(cellButton)
+        
+        cellButton.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        cellButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        cellButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        cellButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
     }
     
     required init?(coder: NSCoder) {

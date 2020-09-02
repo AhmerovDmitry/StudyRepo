@@ -48,7 +48,7 @@ class CustomCell: UICollectionViewCell {
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.backgroundColor = .clear
         btn.layer.borderWidth = 1
-        btn.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        btn.layer.borderColor = UIColor.black.cgColor
         btn.layer.cornerRadius = 20
         btn.setTitle("🚀", for: .normal)
         

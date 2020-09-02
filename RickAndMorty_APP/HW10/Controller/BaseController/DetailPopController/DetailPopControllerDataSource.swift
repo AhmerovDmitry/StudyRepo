@@ -18,11 +18,12 @@ extension DetailPopController: UICollectionViewDelegateFlowLayout, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! DetailCustomCell
+        cell.data = self.data[indexPath.row]
         cell.layer.borderColor = UIColor.white.cgColor
         cell.layer.borderWidth = 2.5
         cell.layer.cornerRadius = 20
