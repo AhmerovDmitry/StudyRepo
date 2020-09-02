@@ -14,8 +14,7 @@ class DeatilPopControllerCell: UICollectionViewCell {
     
     private let bg: UIImageView = {
         let bg = UIImageView()
-        bg.frame.size = CGSize(width: 100, height: 100)
-        bg.backgroundColor = .yellow
+        bg.backgroundColor = .clear
         bg.layer.cornerRadius = 25
         
         return bg

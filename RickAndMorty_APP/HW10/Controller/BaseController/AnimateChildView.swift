@@ -22,6 +22,7 @@ extension BaseViewController {
                            completion: { _ in
                             print("DeatilPopController init")
             })
+        
         case false:
             UIView.animate(withDuration: 0.25,
                            delay: 0.0,

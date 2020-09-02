@@ -41,7 +41,7 @@ class BaseViewController: UIViewController {
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         [backgroundImage, collectionView].forEach { view.addSubview($0) }
         
         backgroundImage.contentMode = .scaleAspectFill

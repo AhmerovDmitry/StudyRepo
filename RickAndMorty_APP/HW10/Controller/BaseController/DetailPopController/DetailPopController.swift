@@ -23,9 +23,11 @@ class DetailPopController: UIViewController {
     
     fileprivate let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 30, left: 30, bottom: 30, right: 30)
+        layout.minimumInteritemSpacing = 20
+        layout.minimumLineSpacing = 20
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.translatesAutoresizingMaskIntoConstraints = false
-        
         cv.register(DeatilPopControllerCell.self, forCellWithReuseIdentifier: "cell")
         
         return cv
@@ -47,11 +49,11 @@ class DetailPopController: UIViewController {
         transparentView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         
         transparentView.addSubview(collectionView)
-        collectionView.backgroundColor = .blue
-        collectionView.topAnchor.constraint(equalTo: transparentView.topAnchor, constant: 25).isActive = true
+        collectionView.backgroundColor = .clear
+        collectionView.topAnchor.constraint(equalTo: transparentView.topAnchor, constant: 0).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: transparentView.bottomAnchor, constant: 0).isActive = true
-        collectionView.leadingAnchor.constraint(equalTo: transparentView.leadingAnchor, constant: 25).isActive = true
-        collectionView.trailingAnchor.constraint(equalTo: transparentView.trailingAnchor, constant: -25).isActive = true
+        collectionView.leadingAnchor.constraint(equalTo: transparentView.leadingAnchor, constant: 0).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo: transparentView.trailingAnchor, constant: 0).isActive = true
         collectionView.delegate = self
         collectionView.dataSource = self
     }
