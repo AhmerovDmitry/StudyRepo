@@ -15,20 +15,8 @@ class DetailPopController: UIViewController {
         DetailCustomData(text: "Call Jessica"),
         DetailCustomData(text: "..."),
         DetailCustomData(text: "Chat Rick")
-
     ]
-    
-    fileprivate var transparentView: UIImageView = {
-        var image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.backgroundColor = .clear
-        image.layer.borderWidth = 2.5
-        image.layer.borderColor = UIColor.white.cgColor
-        image.layer.cornerRadius = 25
-
-        return image
-    }()
-    
+    // MARK: - collectionView
     fileprivate let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 30, left: 30, bottom: 30, right: 30)
@@ -37,6 +25,7 @@ class DetailPopController: UIViewController {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.register(DetailCustomCell.self, forCellWithReuseIdentifier: "cell")
+        cv.backgroundColor = .clear
         
         return cv
     }()
@@ -45,23 +34,15 @@ class DetailPopController: UIViewController {
         super.viewDidLoad()
         
         self.view.frame = CGRect(x: 7.0, y: 368.0 * 2, width: 400.0, height: 400.0)
-        view.backgroundColor = .clear
         view.layer.borderWidth = 2.5
         view.layer.borderColor = UIColor.white.cgColor
         view.layer.cornerRadius = 25
-
-        view.addSubview(transparentView)
-        transparentView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-        transparentView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-        transparentView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
-        transparentView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         
-        transparentView.addSubview(collectionView)
-        collectionView.backgroundColor = .clear
-        collectionView.topAnchor.constraint(equalTo: transparentView.topAnchor, constant: 0).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: transparentView.bottomAnchor, constant: 0).isActive = true
-        collectionView.leadingAnchor.constraint(equalTo: transparentView.leadingAnchor, constant: 0).isActive = true
-        collectionView.trailingAnchor.constraint(equalTo: transparentView.trailingAnchor, constant: 0).isActive = true
+        view.addSubview(collectionView)
+        collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         collectionView.delegate = self
         collectionView.dataSource = self
     }

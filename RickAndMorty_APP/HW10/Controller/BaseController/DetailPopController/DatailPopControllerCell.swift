@@ -21,12 +21,14 @@ class DetailCustomCell: UICollectionViewCell {
     }
     //MARK: - cellButton
     let cellButton: UIButton = {
-        let btn = UIButton(type: .custom)
+        let btn = UIButton(type: .system)
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.clipsToBounds = true
         btn.layer.backgroundColor = UIColor.clear.cgColor
         btn.titleLabel?.font = UIFont(name: "Futura", size: 15)
         btn.titleLabel?.textAlignment = .center
+        btn.titleLabel?.textColor = .white
+        btn.backgroundColor = .clear
+        btn.setTitleColor(.white, for: .normal)
     
         return btn
     }()
@@ -35,7 +37,6 @@ class DetailCustomCell: UICollectionViewCell {
         super.init(frame: frame)
         
         contentView.addSubview(cellButton)
-        
         cellButton.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         cellButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         cellButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true

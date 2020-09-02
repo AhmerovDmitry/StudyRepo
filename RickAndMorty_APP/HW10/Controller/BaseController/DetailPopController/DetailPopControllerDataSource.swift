@@ -27,7 +27,15 @@ extension DetailPopController: UICollectionViewDelegateFlowLayout, UICollectionV
         cell.layer.borderColor = UIColor.white.cgColor
         cell.layer.borderWidth = 2.5
         cell.layer.cornerRadius = 20
-                
+        
+        cell.cellButton.addTarget(self, action: #selector(callJessica), for: .touchUpInside)
+        
         return cell
+    }
+}
+
+extension DetailPopController {
+    @objc func callJessica() {
+        print("Call Jessica")
     }
 }
