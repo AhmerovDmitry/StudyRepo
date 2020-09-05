@@ -23,10 +23,10 @@ class DetailCustomCell: UICollectionViewCell {
     let cellButton: UIButton = {
         let btn = UIButton(type: .system)
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.layer.backgroundColor = UIColor.clear.cgColor
         btn.titleLabel?.font = UIFont(name: "Futura", size: 15)
+        btn.titleLabel?.lineBreakMode = .byWordWrapping
+        //btn.setAttributedTitle(<#T##title: NSAttributedString?##NSAttributedString?#>, for: .normal)
         btn.titleLabel?.textAlignment = .center
-        btn.titleLabel?.textColor = .white
         btn.backgroundColor = .clear
         btn.setTitleColor(.white, for: .normal)
     

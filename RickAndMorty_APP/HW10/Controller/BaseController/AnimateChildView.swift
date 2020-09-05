@@ -37,6 +37,3 @@ extension BaseViewController {
         }
     }
 }
-
-//self.view.frame = CGRect(x: 7.0, y: 368.0 * 2, width: 400.0, height: 400.0)
-//self.children[0].view.frame.origin.y = 368

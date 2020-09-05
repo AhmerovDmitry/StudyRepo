@@ -9,6 +9,10 @@
 import UIKit
 
 class DetailPopController: UIViewController {
+    func printText() -> Void {
+        print("Hello :D")
+    }
+    
     let data = [
         DetailCustomData(text: "Memory"),
         DetailCustomData(text: "Cloning"),
