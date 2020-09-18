@@ -14,16 +14,17 @@ class ViewController: UIViewController {
     var touchCount = 0
     
     // change alpha and cornerRadius for "viewArray"
-    func settings(for arrayView: [UIView], alpha: CGFloat, cornerRadius: CGFloat) {
+    func settings(for arrayView: [UIView], alpha: CGFloat) {
         for view in arrayView {
             view.alpha = alpha
-            view.layer.cornerRadius = cornerRadius
+            view.layer.cornerRadius = view.frame.width / 2
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        settings(for: viewArray, alpha: 0.3, cornerRadius: 75)
+        print(viewArray[0].frame.width)
+        settings(for: viewArray, alpha: 0.3)
         // change color for "view"
         viewArray[0].backgroundColor = .red
         viewArray[1].backgroundColor = .orange
