@@ -2,16 +2,7 @@
   "images" : [
     {
       "filename" : "flat,128x128,075,t-pad,128x128,f8f8f8.jpg",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "idiom" : "universal"
     }
   ],
   "info" : {

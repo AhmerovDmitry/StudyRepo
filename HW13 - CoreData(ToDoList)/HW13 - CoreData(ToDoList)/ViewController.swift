@@ -18,6 +18,7 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        setupView()
     }
     
     private func setupView() {
@@ -26,20 +27,6 @@ class ViewController: UITableViewController {
     }
     
     private func settingsForNavigationBar() {
-//        title = "ToDo"
-//
-//        navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor : UIColor.black]
-//        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black]
-//
-//        navigationController?.navigationBar.barTintColor = .blue
-//
-//        //navigationController?.navigationBar.prefersLargeTitles = true
-//
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+",
-//                                                            style: .plain,
-//                                                            target: self,
-//                                                            action: #selector(addNewTask))
-        
         title = "Tasks list"
         
         // Title color
@@ -57,9 +44,6 @@ class ViewController: UITableViewController {
             blue: 192/255,
             alpha: 194/255
         )
-        
-        // Set large title
-        //navigationController?.navigationBar.prefersLargeTitles = true
         
         // Add button to navigation bar
         navigationItem.rightBarButtonItem = UIBarButtonItem(

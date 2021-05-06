@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC0D50C825F52E26003FBB14 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC0D50C625F52E26003FBB14 /* Model.xcdatamodeld */; };
 		BCDE8D0724D03F8500996B70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE8D0624D03F8500996B70 /* AppDelegate.swift */; };
 		BCDE8D0B24D03F8500996B70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE8D0A24D03F8500996B70 /* ViewController.swift */; };
-		BCDE8D1124D03F8500996B70 /* HW13___CoreData_ToDoList_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCDE8D0F24D03F8500996B70 /* HW13___CoreData_ToDoList_.xcdatamodeld */; };
 		BCDE8D1324D03F8700996B70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCDE8D1224D03F8700996B70 /* Assets.xcassets */; };
 		BCDE8D1624D03F8700996B70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCDE8D1424D03F8700996B70 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC0D50C725F52E26003FBB14 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BCDE8D0324D03F8500996B70 /* HW13 - CoreData(ToDoList).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW13 - CoreData(ToDoList).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCDE8D0624D03F8500996B70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCDE8D0A24D03F8500996B70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BCDE8D1024D03F8500996B70 /* HW13___CoreData_ToDoList_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "HW13___CoreData_ToDoList_.xcdatamodel"; sourceTree = "<group>"; };
 		BCDE8D1224D03F8700996B70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCDE8D1524D03F8700996B70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCDE8D1724D03F8700996B70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +38,7 @@
 		BCDE8CFA24D03F8500996B70 = {
 			isa = PBXGroup;
 			children = (
+				BC0D50C625F52E26003FBB14 /* Model.xcdatamodeld */,
 				BCDE8D0524D03F8500996B70 /* HW13 - CoreData(ToDoList) */,
 				BCDE8D0424D03F8500996B70 /* Products */,
 			);
@@ -59,7 +60,6 @@
 				BCDE8D1224D03F8700996B70 /* Assets.xcassets */,
 				BCDE8D1424D03F8700996B70 /* LaunchScreen.storyboard */,
 				BCDE8D1724D03F8700996B70 /* Info.plist */,
-				BCDE8D0F24D03F8500996B70 /* HW13___CoreData_ToDoList_.xcdatamodeld */,
 			);
 			path = "HW13 - CoreData(ToDoList)";
 			sourceTree = "<group>";
@@ -91,7 +91,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Дмитрий Ахмеров";
 				TargetAttributes = {
 					BCDE8D0224D03F8500996B70 = {
@@ -135,8 +135,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCDE8D0B24D03F8500996B70 /* ViewController.swift in Sources */,
-				BCDE8D1124D03F8500996B70 /* HW13___CoreData_ToDoList_.xcdatamodeld in Sources */,
 				BCDE8D0724D03F8500996B70 /* AppDelegate.swift in Sources */,
+				BC0D50C825F52E26003FBB14 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +180,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -240,6 +241,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -328,13 +330,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BCDE8D0F24D03F8500996B70 /* HW13___CoreData_ToDoList_.xcdatamodeld */ = {
+		BC0D50C625F52E26003FBB14 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BCDE8D1024D03F8500996B70 /* HW13___CoreData_ToDoList_.xcdatamodel */,
+				BC0D50C725F52E26003FBB14 /* Model.xcdatamodel */,
 			);
-			currentVersion = BCDE8D1024D03F8500996B70 /* HW13___CoreData_ToDoList_.xcdatamodel */;
-			path = "HW13___CoreData_ToDoList_.xcdatamodeld";
+			currentVersion = BC0D50C725F52E26003FBB14 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
