@@ -13,7 +13,20 @@
 		BC5708F02645264400755FBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5708EE2645264400755FBF /* Main.storyboard */; };
 		BC5708F22645264900755FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC5708F12645264900755FBF /* Assets.xcassets */; };
 		BC5708F52645264900755FBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5708F32645264900755FBF /* LaunchScreen.storyboard */; };
+		BC5709032645267000755FBF /* ContactList_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5709022645267000755FBF /* ContactList_appTests.swift */; };
+		BC5709112645274F00755FBF /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5709102645274F00755FBF /* PersonTests.swift */; };
+		BC570913264528A800755FBF /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC570912264528A800755FBF /* Person.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC5709052645267000755FBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5708DD2645264400755FBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC5708E42645264400755FBF;
+			remoteInfo = ContactList_app;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BC5708E52645264400755FBF /* ContactList_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,11 +36,23 @@
 		BC5708EF2645264400755FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC5708F12645264900755FBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC5708F42645264900755FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BC5708F62645264900755FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC5708F62645264900755FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ContactList_app/Supports/Info.plist; sourceTree = SOURCE_ROOT; };
+		BC5709002645266F00755FBF /* ContactList_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactList_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC5709022645267000755FBF /* ContactList_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactList_appTests.swift; sourceTree = "<group>"; };
+		BC5709042645267000755FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC5709102645274F00755FBF /* PersonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
+		BC570912264528A800755FBF /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BC5708E22645264400755FBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC5708FD2645266F00755FBF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				BC5708E72645264400755FBF /* ContactList_app */,
+				BC5709012645267000755FBF /* ContactList_appTests */,
 				BC5708E62645264400755FBF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				BC5708E52645264400755FBF /* ContactList_app.app */,
+				BC5709002645266F00755FBF /* ContactList_appTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +83,74 @@
 		BC5708E72645264400755FBF /* ContactList_app */ = {
 			isa = PBXGroup;
 			children = (
-				BC5708E82645264400755FBF /* AppDelegate.swift */,
-				BC5708EA2645264400755FBF /* SceneDelegate.swift */,
-				BC5708EC2645264400755FBF /* ViewController.swift */,
-				BC5708EE2645264400755FBF /* Main.storyboard */,
-				BC5708F12645264900755FBF /* Assets.xcassets */,
-				BC5708F32645264900755FBF /* LaunchScreen.storyboard */,
-				BC5708F62645264900755FBF /* Info.plist */,
+				BC57090E264526D200755FBF /* Models */,
+				BC57090C264526A500755FBF /* Controllers */,
+				BC57090A2645268400755FBF /* Storyboards */,
+				BC57090D264526B200755FBF /* Source */,
+				BC57090B2645269800755FBF /* Supports */,
 			);
 			path = ContactList_app;
+			sourceTree = "<group>";
+		};
+		BC5709012645267000755FBF /* ContactList_appTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC57090F2645271100755FBF /* Models */,
+				BC5709022645267000755FBF /* ContactList_appTests.swift */,
+				BC5709042645267000755FBF /* Info.plist */,
+			);
+			path = ContactList_appTests;
+			sourceTree = "<group>";
+		};
+		BC57090A2645268400755FBF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BC5708EE2645264400755FBF /* Main.storyboard */,
+				BC5708F32645264900755FBF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BC57090B2645269800755FBF /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				BC5708E82645264400755FBF /* AppDelegate.swift */,
+				BC5708EA2645264400755FBF /* SceneDelegate.swift */,
+				BC5708F62645264900755FBF /* Info.plist */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		BC57090C264526A500755FBF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC5708EC2645264400755FBF /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BC57090D264526B200755FBF /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BC5708F12645264900755FBF /* Assets.xcassets */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		BC57090E264526D200755FBF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC570912264528A800755FBF /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC57090F2645271100755FBF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC5709102645274F00755FBF /* PersonTests.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +173,24 @@
 			productReference = BC5708E52645264400755FBF /* ContactList_app.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BC5708FF2645266F00755FBF /* ContactList_appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC5709072645267000755FBF /* Build configuration list for PBXNativeTarget "ContactList_appTests" */;
+			buildPhases = (
+				BC5708FC2645266F00755FBF /* Sources */,
+				BC5708FD2645266F00755FBF /* Frameworks */,
+				BC5708FE2645266F00755FBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC5709062645267000755FBF /* PBXTargetDependency */,
+			);
+			name = ContactList_appTests;
+			productName = ContactList_appTests;
+			productReference = BC5709002645266F00755FBF /* ContactList_appTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +202,10 @@
 				TargetAttributes = {
 					BC5708E42645264400755FBF = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					BC5708FF2645266F00755FBF = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = BC5708E42645264400755FBF;
 					};
 				};
 			};
@@ -115,6 +223,7 @@
 			projectRoot = "";
 			targets = (
 				BC5708E42645264400755FBF /* ContactList_app */,
+				BC5708FF2645266F00755FBF /* ContactList_appTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +239,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BC5708FE2645266F00755FBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -139,11 +255,29 @@
 			files = (
 				BC5708ED2645264400755FBF /* ViewController.swift in Sources */,
 				BC5708E92645264400755FBF /* AppDelegate.swift in Sources */,
+				BC570913264528A800755FBF /* Person.swift in Sources */,
 				BC5708EB2645264400755FBF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BC5708FC2645266F00755FBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC5709112645274F00755FBF /* PersonTests.swift in Sources */,
+				BC5709032645267000755FBF /* ContactList_appTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC5709062645267000755FBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC5708E42645264400755FBF /* ContactList_app */;
+			targetProxy = BC5709052645267000755FBF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BC5708EE2645264400755FBF /* Main.storyboard */ = {
@@ -287,7 +421,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ContactList_app/Info.plist;
+				INFOPLIST_FILE = ContactList_app/Supports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ContactList_app/Info.plist;
+				INFOPLIST_FILE = ContactList_app/Supports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,6 +448,44 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BC5709082645267000755FBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ContactList_appTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ahmerov-dmitry.com.ContactList-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContactList_app.app/ContactList_app";
+			};
+			name = Debug;
+		};
+		BC5709092645267000755FBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ContactList_appTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ahmerov-dmitry.com.ContactList-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContactList_app.app/ContactList_app";
 			};
 			name = Release;
 		};
@@ -334,6 +506,15 @@
 			buildConfigurations = (
 				BC5708FA2645264900755FBF /* Debug */,
 				BC5708FB2645264900755FBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC5709072645267000755FBF /* Build configuration list for PBXNativeTarget "ContactList_appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC5709082645267000755FBF /* Debug */,
+				BC5709092645267000755FBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
